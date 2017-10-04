@@ -18,7 +18,7 @@ class AddController extends Controller
           'groupNumb'=>'required|max:5',
           'email'=>'required|max:30|unique:students',
           'rate'=>'size:3 | required',
-          'birthday'=>'required|date|date_format:Y-m-d|before:tomorrow',
+          'birthday'=>'required|date|date_format:Y-m-d|before:tomorrow|after:1930-01-01',
           'residence'=>'required',
       ]);
         $data=$request->all();
