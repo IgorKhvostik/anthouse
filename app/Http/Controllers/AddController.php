@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Student;
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Cookie\CookieJar;
 class AddController extends Controller
 {
    public function add(){
@@ -23,8 +25,10 @@ class AddController extends Controller
        $student=new Student();
        $student->fill($data);
        $student->save();
-       return redirect('/');
-       /*$result=DB::insert('INSERT INTO students (name, lastName, gender, groupNumb, email, rate, birthday, residence) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', $data);*/
+       $cookie=cookie('email', $request['email'],1000);
+       /*return redirect('add')->with(cookie($cookie));*/
+       return response('Hello World')->cookie($cookie);
+       
 
    }
 }
