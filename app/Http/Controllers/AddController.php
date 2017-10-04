@@ -17,18 +17,15 @@ class AddController extends Controller
           'gender'=>'required',
           'groupNumb'=>'required|max:5',
           'email'=>'required|max:30|unique:students',
-          'rate'=>'required|max:5',
-          'birthday'=>'required',
+          'rate'=>'size:3 | required',
+          'birthday'=>'required|date|date_format:Y-m-d|before:tomorrow',
           'residence'=>'required',
       ]);
         $data=$request->all();
        $student=new Student();
        $student->fill($data);
        $student->save();
-       $cookie=cookie('email', $request['email'],1000);
-       /*return redirect('add')->with(cookie($cookie));*/
-       return response('Hello World')->cookie($cookie);
-       
+       return redirect('add');
 
    }
 }

@@ -27,6 +27,7 @@
                 </tr>
             @endforeach
         </table>
+    {{ $students->links() }}
     </div> <!-- /container -->
 <div class="jumbotron">
     <div class="container">

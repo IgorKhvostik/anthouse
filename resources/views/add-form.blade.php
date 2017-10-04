@@ -51,7 +51,7 @@
                     <input type="email" class="form-control" id="email" name="email">
 
                     <label for="rate">Rate:</label>
-                    <input type="text" class="form-control" id="rate" name="rate">
+                    <input type="number" class="form-control" id="rate" name="rate">
 
                     <label for="date">Birthday:</label>
                     <input type="date" class="form-control" id="date" name="birthday">
@@ -67,6 +67,8 @@
 
                     {{csrf_field() }}
                 </form>
+
+                        <p><a href="/">Go back to the students list</a></p>
 
             </div>
             <div class="col-md-6">
