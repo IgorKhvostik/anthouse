@@ -79,10 +79,7 @@
                                 <li>{{$error}}</li>
                             @endforeach
                         </ul>
-
                     </div>
-                @else
-
                 @endif
             </div>
         </div>
