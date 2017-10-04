@@ -13,3 +13,4 @@
 
 Route::get('/', 'IndexController@index');
 Route::get('add', 'AddController@add');
+Route::post('add', 'AddController@store')->name('studentSave');

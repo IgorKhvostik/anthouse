@@ -25,26 +25,51 @@
     <![endif]-->
 </head>
 <body>
-<div class="jumbotron">
-    <div class="container">
-        <form action="#" class="form-inline">
 
-            <label for="name">Name:</label>
-            <input type="text" class="form-control" id="name">
+    <div class="jumbotron">
+        <div class="container">
+            <div class="col-md-6">
 
-            <label for="lastName">Last Name:</label>
-            <input type="text" class="form-control" id="lastName">
+                <form action="{{route('studentSave')}}" class="form-group" method="POST" name="form">
 
-            <label for="gender">Gender:</label>
-            <select id="gender" name="gender">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name">
 
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName">
 
-        </form>
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" class="form-control">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+
+                    <label for="group">Group:</label>
+                    <input type="text" class="form-control" id="group" name="groupNumb">
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" class="form-control" id="email" name="email">
+
+                    <label for="rate">Rate:</label>
+                    <input type="text" class="form-control" id="rate" name="rate">
+
+                    <label for="date">Birthday:</label>
+                    <input type="date" class="form-control" id="date" name="birthday">
+
+                    <label for="res">Residence:</label>
+                    <select id="res" name="residence" class="form-control">
+                        <option value="resident">Resident</option>
+                        <option value="non-resident">Non-resident</option>
+                    </select>
+
+                    <hr>
+                    <button type="submit" class="btn btn-primary btn-block">Save</button>
+
+                    {{csrf_field() }}
+                </form>
+
+            </div>
+        </div>
     </div>
-</div>
 
-</form>
 </body>
