@@ -7,7 +7,7 @@ use App\Student;
 class IndexController extends Controller
 {
     public function index(){
-        $students=Student::all();
+        $students=Student::orderBy('rate','desc')->get();
       return  view('students')->with('students', $students);
     }
 
