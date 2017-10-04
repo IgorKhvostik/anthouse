@@ -2,6 +2,7 @@
 @section('content')
 
 <div class="container"> <!--student table-->
+
         <table class="table table-striped">
             <tr>
                 <th>Name</th>

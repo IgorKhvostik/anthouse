@@ -69,6 +69,20 @@
                 </form>
 
             </div>
+            <div class="col-md-6">
+                @if(!empty($errors->first()))
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                                <li>{{$error}}</li>
+                            @endforeach
+                        </ul>
+
+                    </div>
+                @else
+
+                @endif
+            </div>
         </div>
     </div>
 
